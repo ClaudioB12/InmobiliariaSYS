@@ -17,12 +17,13 @@ class InmuebleFactory extends Factory
     public function definition(): array
     {
 
-        $titulo = $this->faker->unique()->word(500);
+        $titulo = $this->faker->unique()->word(100);
+        $descripcion = $this->faker->unique()->word(100);
 
 
         return [
             'titulo' => $titulo,
-            'descripcion' => $this->faker->paragraph,
+            'descripcion' => $descripcion,
             'direccion' => $this->faker->address,
             'categoria' => $this->faker->numberBetween(1, 5), // Asumiendo que tienes 5 categorías
             'precio' => $this->faker->randomFloat(2, 50000, 500000), // Precio entre 50,000 y 500,000
