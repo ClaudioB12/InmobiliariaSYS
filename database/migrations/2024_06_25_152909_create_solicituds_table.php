@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('solicituds', function (Blueprint $table) {
             $table->id();
+            $table->date('fecha_solicitud');
+            $table->enum('estado',['Activo','Inactivo']);
+            $table->unsignedBigInteger('cliente_id');
+            $table->unsignedBigInteger('inmueble_id');
+            $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreign('inmueble_id')->references('id')->on('inmuebles')->onDelete('cascade');
             $table->timestamps();
         });
     }

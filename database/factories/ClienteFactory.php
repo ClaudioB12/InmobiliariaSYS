@@ -17,7 +17,11 @@ class ClienteFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nombre' => $this->faker->firstName,
+            'apellido' => $this->faker->lastName,
+            'correo' => $this->faker->unique()->safeEmail,
+            'celular' => $this->faker->phoneNumber,
+            'user_id' => \App\Models\User::factory(), // Asocia automáticamente con un usuario
         ];
     }
 }

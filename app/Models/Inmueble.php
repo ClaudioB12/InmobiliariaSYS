@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Inmueble extends Model
 {
     use HasFactory;
+    protected $guarded=['id'];
+
 
     public function solicitud(){
         return $this->hasMany(Solicitud::class);
