@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('direccion');
             $table->integer('categoria');
             $table->decimal('precio',10,2);
-            $table->integer('estado');
+            $table->enum('estado',['Activo','Inactivo']);
             $table->timestamps();
         });
     }
