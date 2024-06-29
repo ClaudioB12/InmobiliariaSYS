@@ -46,6 +46,9 @@
                 <li>
                     <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
                 </li>
+                <li>
+                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
+                </li>
             </ul>
         </div>
     </div>
