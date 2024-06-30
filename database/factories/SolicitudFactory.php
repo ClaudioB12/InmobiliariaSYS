@@ -17,7 +17,10 @@ class SolicitudFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'fecha_solicitud' => $this->faker->date(),
+            'estado'=>$this->faker->randomElement(['Activo','Inactivo']),
+            'cliente_id' => \App\Models\Cliente::factory(), // Asocia automáticamente con un cliente
+            'inmueble_id' => \App\Models\Inmueble::factory(), // Asocia automáticamente con un inmueble
         ];
     }
 }

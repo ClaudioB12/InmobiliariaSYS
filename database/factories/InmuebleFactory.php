@@ -18,16 +18,15 @@ class InmuebleFactory extends Factory
     {
 
         $titulo = $this->faker->unique()->word(100);
-        $descripcion = $this->faker->unique()->word(100);
 
 
         return [
             'titulo' => $titulo,
-            'descripcion' => $descripcion,
+            'descripcion'=>$this->faker->text(2000),
             'direccion' => $this->faker->address,
             'categoria' => $this->faker->numberBetween(1, 5), // Asumiendo que tienes 5 categorías
             'precio' => $this->faker->randomFloat(2, 50000, 500000), // Precio entre 50,000 y 500,000
-            'estado' => $this->faker->numberBetween(0, 1), // Asumiendo que 0 es inactivo y 1 es activo
+            'estado'=>$this->faker->randomElement(['Activo','Inactivo']),
         ];
     }
 }
