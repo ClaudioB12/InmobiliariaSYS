@@ -22,7 +22,7 @@
                         <a href="{{ route('index') }}" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="{{ route('inmuibles') }}" class="text-gray-900 dark:text-white hover:underline">Company</a>
+                        <a href="{{ route('inmuebles') }}" class="text-gray-900 dark:text-white hover:underline">inmuebles</a>
                     </li>
                     <li>
                         <a href="{{ route('proyecto') }}" class="text-gray-900 dark:text-white hover:underline">proyectos</a>

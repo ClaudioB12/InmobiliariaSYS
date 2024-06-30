@@ -17,7 +17,7 @@ Route::view('profile', 'profile')
 
 
 Route::get('/',[IndexLivewire::class,'render'])->name('index');
-Route::get('inmuibles',[InmueblesLivewire::class,'render'])->name('inmuibles');
+Route::get('inmuebles',[InmueblesLivewire::class,'render'])->name('inmuebles');
 Route::get('proyecto',[ProyectoLivewire::class,'render'])->name('proyecto');
 
 

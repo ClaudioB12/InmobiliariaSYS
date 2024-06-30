@@ -2,12 +2,14 @@
 
 namespace App\Livewire;
 
+use App\Models\Inmueble;
 use Livewire\Component;
 
 class InmueblesLivewire extends Component
 {
     public function render()
     {
-        return view('livewire.inmuebles-livewire');
+        $inmuebles=Inmueble::Paginate(8);
+        return view('livewire.inmuebles-livewire',compact('inmuebles'));
     }
 }

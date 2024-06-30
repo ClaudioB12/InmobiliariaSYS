@@ -14,5 +14,8 @@ class Inmueble extends Model
     public function solicitud(){
         return $this->hasMany(Solicitud::class);
     }
+    public function image(){
+        return $this->morphOne(Image::class,'imageable');
+    }
 
 }
